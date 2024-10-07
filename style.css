@@ -1,0 +1,129 @@
+/* Global Style for Body */
+body {
+  display: flex; /* Use flexbox layout for the body */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set a default font for the page */
+  color: #333; /* Use a standard dark color for text */
+}
+
+/* Main Container */
+.container {
+  display: flex; /* Use flexbox layout for columns */
+}
+
+/* Sidebar Style */
+.sidebar {
+  flex: 0.6; /* Adjust to decrease sidebar size (e.g., 0.4 for 40% width) */
+  padding: 20px; /* Add padding for better spacing */
+  background-color: #f2f2ea; /* Light background for the sidebar */
+  display: flex;
+  flex-direction: column; /* Stack elements in a column */
+  justify-content: space-between; /* Space items vertically */
+}
+
+.profile {
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack the image above details */
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px; /* Space below the profile section */
+}
+
+.profile-image {
+  width: 220px; /* Set a fixed width for the image */
+  height: 250px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 50px; /* Space below the image */
+}
+
+.profile-details {
+  text-align: center; /* Center align text */
+}
+
+.profile-details h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 2em; /* Increase font size for better visibility */
+  color: #333; /* Ensure it matches the rest of the text */
+}
+
+.profile-details h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Adjust font size for the position */
+  color: #777; /* Use a lighter color for distinction */
+}
+
+/* Contact Info Style */
+.contact-info {
+  margin-top: auto; /* Push contact info to the bottom */
+}
+
+.contact-info h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Keep font size consistent */
+}
+
+.contact-info p {
+  margin: 5px 0; /* Space between contact paragraphs */
+}
+
+/* Main Content Style */
+.main-content {
+  flex: 2; /* Take 2 parts of the space */
+  padding: 20px; /* Add padding for better spacing */
+  background-color: #fff; /* Set a white background for the main content */
+}
+
+.main-content h2 {
+  font-size: 2em; /* Make section titles more prominent */
+  margin-top: 0; /* Remove top margin for the first h2 */
+}
+
+.main-content ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding from the list */
+}
+
+.main-content li {
+  margin-bottom: 30px; /* Add space between each project */
+}
+
+.main-content li img {
+  width: 100%; /* Make images responsive */
+  max-width: 500px; /* Limit image width */
+  border-radius: 5px; /* Add rounded corners to the images */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.main-content li p {
+  margin-top: 10px; /* Add space between the image and description */
+  font-size: 1em; /* Set a consistent font size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column; /* Stack elements in a column on small screens */
+  }
+  
+  .container {
+    flex-direction: column; /* Stack columns on smaller screens */
+  }
+  
+  .sidebar {
+    border-right: none; /* Remove the border on small screens */
+    border-bottom: 1px solid #ccc; /* Add a bottom border instead */
+  }
+
+  .profile {
+    flex-direction: column; /* Stack the image above details on small screens */
+    align-items: center; /* Center items on small screens */
+  }
+
+  .main-content {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+  
+  .main-content li img {
+    max-width: 100%; /* Ensure images adjust to small screens */
+  }
+}
